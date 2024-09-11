@@ -3,6 +3,11 @@ let tablero = document.getElementById("tablero");
 let boton_play = document.getElementById("boton_play");
 let boton_pause = document.getElementById("boton_pause");
 let boton_reset = document.getElementById("boton_reset");
+const botonHora = document.getElementById('boton-hora');
+const elementoHora = document.getElementById('elemento-hora');
+const botonOcultar = document.getElementById('boton-ocultar');
+
+
 
 
 
@@ -63,4 +68,19 @@ function play(){
 boton_play.addEventListener('click', play);
 boton_pause.addEventListener('click', pause);
 boton_reset.addEventListener('click', reset);
+botonHora.addEventListener('click', () => {
+	const fechaActual = new Date();
+	const horaActual = fechaActual.toLocaleTimeString();
+	
+	if (elementoHora.textContent === horaActual) {
+		elementoHora.textContent = ''; // Oculta la hora
+	} else {
+		elementoHora.textContent = horaActual; // Muestra la hora
+	}
+});
+botonOcultar.addEventListener('click', () => {
+	elementoHora.textContent = ''; // Oculta la hora
+});
+
+
 
