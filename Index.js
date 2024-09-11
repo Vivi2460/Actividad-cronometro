@@ -4,6 +4,8 @@ let boton_play = document.getElementById("boton_play");
 let boton_pause = document.getElementById("boton_pause");
 let boton_reset = document.getElementById("boton_reset");
 
+
+
 // Estados Cronometro
 let esta_activo = false;
 let time = {
@@ -61,3 +63,4 @@ function play(){
 boton_play.addEventListener('click', play);
 boton_pause.addEventListener('click', pause);
 boton_reset.addEventListener('click', reset);
+
